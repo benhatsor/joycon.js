@@ -12,7 +12,7 @@ let Gamepad = {
     
     'on': {
       
-      // a, b, x, y, shoulder-left, shoulder-right, trigger-left, trigger-right, select, start, joystick-left, joystick-right, dpad-up, dpad-down, dpad-left, dpad-right, home, share
+      // a, b, x, y, left-shoulder, right-shoulder, left-trigger, right-trigger, select, start, left-joystick, right-joystick, dpad-up, dpad-down, dpad-left, dpad-right, home, share
       'press': (key, callback) => {
         
         Gamepad.listeners[key] = {
@@ -22,7 +22,7 @@ let Gamepad = {
         
       },
       
-      // joystick-left, joystick-right
+      // left-joystick, right-joystick
       'move': (key, callback) => {
         
         Gamepad.listeners[key + '-move'] = {
@@ -56,7 +56,7 @@ let Gamepad = {
     
     // remove the listener for move events
     // by adding '-move' to the event name, eg.
-    // joystick-left-move
+    // left-joystick-move
     'removeListener': (name) => {
       
       delete Gamepad.listeners[name];
@@ -64,7 +64,7 @@ let Gamepad = {
     },
     
     // intensity:
-    // { preset } or { strongMotorIntensity, mildMotorIntensity }
+    // { preset } or { mildMotorIntensity, strongMotorIntensity }
     // presets:
     // 'mild', 'medium', 'strong'
     'vibrate': async (intensity, duration) => {
@@ -292,14 +292,14 @@ let Gamepad = {
     1: 'b',
     2: 'x',
     3: 'y',
-    4: 'shoulder-left',
-    5: 'shoulder-right',
-    6: 'trigger-left',
-    7: 'trigger-right',
+    4: 'left-shoulder',
+    5: 'right-shoulder',
+    6: 'left-trigger',
+    7: 'right-trigger',
     8: 'select',
     9: 'start',
-    10: 'joystick-left',
-    11: 'joystick-right',
+    10: 'left-joystick',
+    11: 'right-joystick',
     12: 'dpad-up',
     13: 'dpad-down',
     14: 'dpad-left',
@@ -309,10 +309,10 @@ let Gamepad = {
   },
   
   'axisMap': {
-    0: ['x', 'joystick-left-move'],
-    1: ['y', 'joystick-left-move'],
-    2: ['x', 'joystick-right-move'],
-    3: ['y', 'joystick-right-move'],
+    0: ['x', 'left-joystick-move'],
+    1: ['y', 'left-joystick-move'],
+    2: ['x', 'right-joystick-move'],
+    3: ['y', 'right-joystick-move'],
   }
   
 };
