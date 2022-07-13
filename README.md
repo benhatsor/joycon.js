@@ -1,4 +1,4 @@
-# <img src="/icon.svg" width="30px"> Joycon.js 
+# <img src="/icon.svg" width="30px"> Joycon.js
 
 Add controller functionality to your JavaScript game.
 
