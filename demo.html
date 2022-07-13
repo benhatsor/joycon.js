@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Gamepad.js</title>
+  <style>
+    body {
+      font-family: system-ui;
+    }
+    
+    .rumble-buttons.disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+    
+    a {
+      display: block;
+      color: inherit;
+      position: absolute;
+      bottom: calc(0.67em + 8px);
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="message">Move a controller</h1>
+  <hr>
+  <h3 class="joystick-message"></h3>
+  <hr>
+  <h2>Rumble</h2>
+  <div class="rumble-buttons disabled">
+    <button onclick="controllers.vibrate({ preset: 'mild' }, 250)">Mild</button>
+    <button onclick="controllers.vibrate({ preset: 'medium' }, 500)">Medium</button>
+    <button onclick="controllers.vibrate({ preset: 'strong' }, 1000)">Strong</button>
+  </div>
+  <a href="https://github.com/codeitcodes/gamepadjs">Gamepad.js</a>
+  
+  <script src="https://cdn.codeit.codes/Gamepad.min.js"></script>
+  <script>
+    
+    const controllers = Gamepad.controllers;
+    
+    const message = document.querySelector('.message');
+    const joystickMessage = document.querySelector('.joystick-message');
+    const rumbleButtons = document.querySelector('.rumble-buttons');
+    
+    const buttons = Object.values(Gamepad.buttonMap);
+    
+    buttons.forEach(button => {
+    
+      controllers.on.press(button, (value) => {
+        
+        message.textContent = button + '! ' + value;
+        
+      });
+      
+    });
+    
+    controllers.on.move('left-joystick', (value) => {      
+      
+      joystickMessage.textContent = 'Moved left joystick! ' + value.x + ',' + value.y;
+      
+    });
+    
+    controllers.on.move('right-joystick', (value) => {
+      
+      joystickMessage.textContent = 'Moved right joystick! ' + value.x + ',' + value.y;
+            
+    });
+    
+    controllers.on.connect((controller) => {
+      
+      console.log('Controller connected!', controller);
+      message.textContent = 'Controller connected';
+      
+      rumbleButtons.classList.remove('disabled');
+      
+    });
+    
+    controllers.on.disconnect((controller) => {
+      
+      console.log('Controller disconnected!', controller);
+      message.textContent = 'Controller disconnected';
+      
+      rumbleButtons.classList.add('disabled');
+      
+    });
+    
+  </script>
+</body>
+
+</html>
