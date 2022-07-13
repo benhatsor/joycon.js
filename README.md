@@ -11,10 +11,10 @@ Add controller functionality to your game.
 
 Add this line to the `<body>`:
 ```HTML
-<script src="https://raw.githubusercontent.com/codeitcodes/gamepadjs/main/Gamepad.min.js"></script>
+<script src="https://cdn.codeit.codes/Gamepad.min.js"></script>
 ```
 
-Here's a [demo.](https://cde.run/barhatsor/Sketchbook/gamepad-test.html)
+Here's a [demo.](https://cde.run/codeitcodes/gamepadjs/demo.html)
 
 # API
 
