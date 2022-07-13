@@ -1,4 +1,4 @@
-# <img src="/icon.svg" width="30px"> Joycon.js
+# <img src="https://cdn.cde.run/icon.svg" width="30px"> Joycon.js
 
 Add controller functionality to your JavaScript game.
 
@@ -14,7 +14,7 @@ Add this line to the `<body>`:
 <script src="https://cdn.cde.run/Joycon.min.js"></script>
 ```
 
-Here's a [demo.](https://cde.run/codeitcodes/joycon.js/index.html)
+Here's a [demo.](https://cde.run/codeitcodes/joycon.js/demo.html)
 
 # API
 
