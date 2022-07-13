@@ -1,6 +1,6 @@
 # <img src="/icon.svg" width="30px"> Gamepad.js
 
-Add controller functionality to your JavaScript game.
+### Add controller functionality to your JavaScript game.
 
 - Supports PlayStation, Xbox, Switch, etc.
 - [Dead simple API.](#api)
