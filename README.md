@@ -1,27 +1,27 @@
-# <img src="/icon.svg" width="30px"> Gamepad.js
+# <img src="/icon.svg" width="30px"> Joycon.js
 
 Add controller functionality to your JavaScript game.
 
 - Supports PlayStation, Xbox, Switch, etc.
 - [Dead simple API.](#api)
-- [~2.5KB minified.](/Gamepad.min.js)
+- [~2.5KB minified.](/Joycon.min.js)
 - Vibration support.
 
 # Get it
 
 Add this line to the `<body>`:
 ```HTML
-<script src="https://cdn.codeit.codes/Gamepad.min.js"></script>
+<script src="https://cdn.cde.run/Joycon.min.js"></script>
 ```
 
-Here's a [demo.](https://cde.run/codeitcodes/gamepadjs/index.html)
+Here's a [demo.](https://cde.run/codeitcodes/joyconjs/index.html)
 
 # API
 
 ## Buttons
 
 ```JS
-const controllers = Gamepad.controllers;
+const controllers = Joycon.controllers;
 
 controllers.on.press('start', (value) => {
 
@@ -35,7 +35,7 @@ Button can be `a`, `b`, `x`, `y`, `start`, `left-trigger`, etc. ([full list belo
 ## Joystick
 
 ```JS
-const controllers = Gamepad.controllers;
+const controllers = Joycon.controllers;
 
 controllers.on.move('left-joystick', (value) => {
 
@@ -48,7 +48,7 @@ Also `right-joystick`.
 ## Controller connected
 
 ```JS
-const controllers = Gamepad.controllers;
+const controllers = Joycon.controllers;
 
 controllers.on.connect((controller) => {
 
@@ -63,10 +63,10 @@ controllers.on.disconnect((controller) => {
 });
 ```
 
-## Rumble
+## Vibrate
 
 ```JS
-const controllers = Gamepad.controllers;
+const controllers = Joycon.controllers;
 
 // preset can be mild, medium or strong
 controllers.vibrate({ preset: 'medium' }, 250); // -> time in ms
@@ -81,7 +81,7 @@ controllers.vibrate({
 ## Remove a listener
 
 ```JS
-const controllers = Gamepad.controllers;
+const controllers = Joycon.controllers;
 
 controllers.removeListener('left-trigger');
 ```
