@@ -1,4 +1,4 @@
-# <img src="https://abs-0.twimg.com/emoji/v2/svg/1f3ae.svg" width="30px"> Gamepad.js
+# <img src="/gamepad.svg" width="30px"> Gamepad.js
 
 Add controller functionality to your game.
 
