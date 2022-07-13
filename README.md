@@ -14,7 +14,7 @@ Add this line to the `<body>`:
 <script src="https://cdn.codeit.codes/Gamepad.min.js"></script>
 ```
 
-Here's a [demo.](https://cde.run/codeitcodes/gamepadjs/demo.html)
+Here's a [demo.](https://cde.run/codeitcodes/gamepadjs/index.html)
 
 # API
 
