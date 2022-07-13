@@ -14,7 +14,7 @@ Add this line to the `<body>`:
 <script src="https://cdn.cde.run/Joycon.min.js"></script>
 ```
 
-Here's a [demo.](https://cde.run/codeitcodes/joyconjs/index.html)
+Here's a [demo.](https://cde.run/codeitcodes/joycon.js/index.html)
 
 # API
 
