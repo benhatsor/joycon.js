@@ -38,7 +38,7 @@ let Gamepad = {
       
       'connect': (callback) => {
         
-        Gamepad.listeners['controller-connected'] = {
+        Gamepad.listeners['controller-connect'] = {
           callback: callback
         };
                 
@@ -46,7 +46,7 @@ let Gamepad = {
       
       'disconnect': (callback) => {
         
-        Gamepad.listeners['controller-disconnected'] = {
+        Gamepad.listeners['controller-disconnect'] = {
           callback: callback
         };
                 
@@ -252,7 +252,7 @@ let Gamepad = {
       Gamepad.onNextFrame(Gamepad.update);
       
       
-      const controllerListener = Gamepad.listeners['controller-connected'];
+      const controllerListener = Gamepad.listeners['controller-connect'];
       
       // if controller listener exists
       if (controllerListener) {
@@ -269,7 +269,7 @@ let Gamepad = {
       delete Gamepad.controller[e.gamepad.index];
       
       
-      const controllerListener = Gamepad.listeners['controller-disconnected'];
+      const controllerListener = Gamepad.listeners['controller-disconnect'];
       
       // if controller listener exists
       if (controllerListener) {
