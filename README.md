@@ -4,7 +4,7 @@ Add controller functionality to your JavaScript game.
 
 - Supports PlayStation, Xbox, Switch, etc.
 - [Dead simple API.](#api)
-- [~2.5KB minified.](/Joycon.min.js) Dependency-free.
+- [~2.5KB minified.](/Joycon.min.js)
 - Vibration support.
 
 # Get it
