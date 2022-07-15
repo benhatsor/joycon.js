@@ -83,7 +83,12 @@
       console.log('Controller disconnected!', controller);
       message.textContent = 'Controller disconnected';
       
-      rumbleButtons.classList.add('disabled');
+      // if there are no connected controllers
+      if (Object.keys(Joycon.controller).length === 0) {
+        
+        rumbleButtons.classList.add('disabled');
+        
+      }
       
     });
     
