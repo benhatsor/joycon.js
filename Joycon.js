@@ -312,6 +312,8 @@ let Joycon = {
       
     });
     
+    return Joycon.buttonMap['general'];
+    
   },
   
   'buttonMap': {
