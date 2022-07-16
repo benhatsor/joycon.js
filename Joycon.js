@@ -174,7 +174,7 @@ let Joycon = {
       // if using a right Joy-Con controller, change axes
       if (controller.id.startsWith('Joy-Con (R)')) {
         axisMap[0] = axisMap[2];
-        axiosMap[1] = axisMap[3];
+        axisMap[1] = axisMap[3];
       }
       
       const axesObj = controller.axes;
