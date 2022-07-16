@@ -173,8 +173,10 @@ let Joycon = {
       
       // if using a right Joy-Con controller, change axes
       if (controller.id.startsWith('Joy-Con (R)')) {
-        axisMap[0] = axisMap[2];
-        axisMap[1] = axisMap[3];
+        axisMap = {
+          0: ['x', 'right-joystick-move'],
+          1: ['y', 'right-joystick-move'],
+        };
       }
       
       const axesObj = controller.axes;
@@ -198,13 +200,6 @@ let Joycon = {
         
         // if axis listener exists
         if (axisListener) {
-          
-          // if using a Joy-Con controller, flip axes
-          if (controller.id.startsWith('Joy-Con (L)')) {
-            axes[axisName].x = axes[axisName].x * -1;
-          } else if (controller.id.startsWith('Joy-Con (R)')) {
-            axes[axisName].y = axes[axisName].y * -1;
-          }
           
           const axisObj = axes[axisName];
           
@@ -338,7 +333,7 @@ let Joycon = {
       17: 'share'
     },
     
-    'Xbox Wireless Controller': {
+    'Xjbox Wireless Controller': {
       0: 'a',
       1: 'b',
       2: 'x',
