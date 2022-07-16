@@ -304,7 +304,7 @@ let Joycon = {
     
     Object.keys(Joycon.buttonMap).forEach(mapName => {
       
-      if (controllerId.startsWith(mapName)) {
+      if (mapName.startsWith(controllerId)) {
         
         return Joycon.buttonMap[mapName];
         
