@@ -138,11 +138,13 @@ let Joycon = {
     Joycon.updateControllers();
     
     
+    const buttonMap = Joycon.buttonMap;
+    const axisMap = Joycon.axisMap;
+    
     const controllers = Object.values(Joycon.controller);
     
     controllers.forEach(controller => {
       
-      const buttonMap = Joycon.getButtonMap(controller.id);
       const buttons = controller.buttons;
       
       buttons.forEach((button, index) => {
@@ -168,16 +170,6 @@ let Joycon = {
         
       });
       
-      
-      let axisMap = Joycon.axisMap;
-      
-      // if using a right Joy-Con controller, change axes
-      if (controller.id.startsWith('Joy-Con (R)')) {
-        axisMap = {
-          0: ['x', 'right-joystick-move'],
-          1: ['y', 'right-joystick-move'],
-        };
-      }
       
       const axesObj = controller.axes;
       let axes = {};
@@ -295,92 +287,25 @@ let Joycon = {
     window.requestAnimationFrame(callback);
   },
   
-  'getButtonMap': (controllerId) => {
-    
-    Object.keys(Joycon.buttonMap).forEach(mapName => {
-      
-      if (mapName.startsWith(controllerId)) {
-        
-        return Joycon.buttonMap[mapName];
-        
-      }
-      
-    });
-    
-    return Joycon.buttonMap['general'];
-    
-  },
-  
   'buttonMap': {
-    'general': {
-      0: 'a',
-      1: 'b',
-      2: 'x',
-      3: 'y',
-      4: 'left-shoulder',
-      5: 'right-shoulder',
-      6: 'left-trigger',
-      7: 'right-trigger',
-      8: 'select',
-      9: 'start',
-      10: 'left-joystick',
-      11: 'right-joystick',
-      12: 'dpad-up',
-      13: 'dpad-down',
-      14: 'dpad-left',
-      15: 'dpad-right',
-      16: 'home',
-      17: 'share'
-    },
-    
-    'Xjbox Wireless Controller': {
-      0: 'a',
-      1: 'b',
-      2: 'x',
-      3: 'y',
-      4: 'left-shoulder',
-      5: 'right-shoulder',
-      6: 'left-trigger',
-      7: 'right-trigger',
-      8: 'select',
-      9: 'start',
-      10: 'left-joystick',
-      11: 'right-joystick',
-      12: 'dpad-up',
-      13: 'dpad-down',
-      14: 'dpad-left',
-      15: 'dpad-right',
-      16: 'home',
-      17: 'share'
-    },
-    
-    'Joy-Con (L)': {
-      0: 'dpad-left',
-      1: 'dpad-down',
-      2: 'dpad-up',
-      3: 'dpad-right',
-      4: 'side-left-shoulder',
-      5: 'side-right-shoulder',
-      6: 'left-trigger',
-      8: 'left-shoulder',
-      9: 'select',
-      10: 'left-joystick',
-      16: 'share'
-    },
-    
-    'Joy-Con (R)': {
-      0: 'a',
-      1: 'x',
-      2: 'b',
-      3: 'y',
-      4: 'side-left-shoulder',
-      5: 'side-right-shoulder',
-      7: 'right-trigger',
-      8: 'right-shoulder',
-      9: 'start',
-      10: 'right-joystick',
-      16: 'home'
-    }
+    0: 'a',
+    1: 'b',
+    2: 'x',
+    3: 'y',
+    4: 'left-shoulder',
+    5: 'right-shoulder',
+    6: 'left-trigger',
+    7: 'right-trigger',
+    8: 'select',
+    9: 'start',
+    10: 'left-joystick',
+    11: 'right-joystick',
+    12: 'dpad-up',
+    13: 'dpad-down',
+    14: 'dpad-left',
+    15: 'dpad-right',
+    16: 'home',
+    17: 'share'
   },
   
   'axisMap': {
@@ -393,4 +318,3 @@ let Joycon = {
 };
 
 Joycon.addListeners();
-
