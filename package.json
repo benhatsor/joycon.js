@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Add controller functionality to your JavaScript game.",
   "main": "Joycon.min.js",
-  "homepage": "https://joycon.codeit.codes",
+  "homepage": "https://joycon.js.org",
   "author": "barhatsor",
   "license": "MIT"
 }
