@@ -93,14 +93,14 @@ Remove controller `connect` events with `controller-connect`.
 
 # Button list
 
-[See above](#buttons) on how to use these.
-
 | Buttons: |  |  |  |  |
 |---|---|---|---|---|
-| a | left-shoulder | select | dpad-up | home |
-| b | right-shoulder | start | dpad-down | share |
-| x | left-trigger | left-joystick | dpad-left |
-| y | right-trigger | right-joystick | dpad-right |
+| `a` | `left-shoulder` | `select` | `dpad-up` | `home` |
+| `b` | `right-shoulder` | `start` | `dpad-down` | `share` |
+| `x` | `left-trigger` | `left-joystick` | `dpad-left` |
+| `y` | `right-trigger` | `right-joystick` | `dpad-right` |
+
+[See above](#buttons) on how to use these.
 
 # License
 
