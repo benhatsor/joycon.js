@@ -1,4 +1,5 @@
 # <img src="icon.svg" width="30px"> Joycon.js
+[![License](https://img.shields.io/github/license/barhatsor/joycon.js)](/LICENSE) [![Minified size](https://img.shields.io/github/size/barhatsor/joycon.js/Joycon.min.js)](/Joycon.min.js)
 
 Add controller functionality to your JavaScript game.
 
