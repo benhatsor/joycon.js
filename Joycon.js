@@ -2,18 +2,18 @@
 let Joycon = {
   
   // event listeners
-  'listeners': {},
+  listeners: {},
   
   // controllers
-  'controller': {},
+  controller: {},
   
   // controller utility functions
-  'controllers': {
+  controllers: {
     
-    'on': {
+    on: {
       
       // a, b, x, y, left-shoulder, right-shoulder, left-trigger, right-trigger, select, start, left-joystick, right-joystick, dpad-up, dpad-down, dpad-left, dpad-right, home, share
-      'press': (key, callback) => {
+      press: (key, callback) => {
         
         Joycon.listeners[key] = {
           callback: callback,
@@ -23,7 +23,7 @@ let Joycon = {
       },
       
       // left-joystick, right-joystick
-      'move': (key, callback) => {
+      move: (key, callback) => {
         
         Joycon.listeners[key + '-move'] = {
           callback: callback,
@@ -36,7 +36,7 @@ let Joycon = {
       },
       
       
-      'connect': (callback) => {
+      connect: (callback) => {
         
         Joycon.listeners['controller-connect'] = {
           callback: callback
@@ -44,7 +44,7 @@ let Joycon = {
                 
       },
       
-      'disconnect': (callback) => {
+      disconnect: (callback) => {
         
         Joycon.listeners['controller-disconnect'] = {
           callback: callback
@@ -57,7 +57,7 @@ let Joycon = {
     // remove the listener for move events
     // by adding '-move' to the event name, eg.
     // left-joystick-move
-    'removeListener': (name) => {
+    removeListener: (name) => {
       
       delete Joycon.listeners[name];
       
@@ -67,7 +67,7 @@ let Joycon = {
     // { preset } or { mildMotorIntensity, strongMotorIntensity }
     // presets:
     // 'mild', 'medium', 'strong'
-    'vibrate': async (intensity, duration) => {
+    vibrate: async (intensity, duration) => {
       
       // if chosen a preset
       if (intensity.preset) {
@@ -112,7 +112,7 @@ let Joycon = {
       
     },
     
-    'vibrationPresets': {
+    vibrationPresets: {
 
       mild: {
         strongMotorIntensity: 0,
@@ -133,7 +133,7 @@ let Joycon = {
     
   },
   
-  'update': () => {
+  update: () => {
     
     Joycon.updateControllers();
     
@@ -227,7 +227,7 @@ let Joycon = {
     
   },
   
-  'updateControllers': () => {
+  updateControllers: () => {
     
     const controllers = navigator.getGamepads();
     
@@ -243,7 +243,7 @@ let Joycon = {
     
   },
   
-  'addListeners': () => {
+  addListeners: () => {
     
     window.addEventListener('gamepadconnected', (e) => {
       
@@ -283,11 +283,11 @@ let Joycon = {
     
   },
   
-  'onNextFrame': (callback) => {
+  onNextFrame: (callback) => {
     window.requestAnimationFrame(callback);
   },
   
-  'buttonMap': {
+  buttonMap: {
     0: 'a',
     1: 'b',
     2: 'x',
@@ -308,7 +308,7 @@ let Joycon = {
     17: 'share'
   },
   
-  'axisMap': {
+  axisMap: {
     0: ['x', 'left-joystick-move'],
     1: ['y', 'left-joystick-move'],
     2: ['x', 'right-joystick-move'],
@@ -318,3 +318,4 @@ let Joycon = {
 };
 
 Joycon.addListeners();
+
