@@ -88,8 +88,8 @@ const controllers = Joycon.controllers;
 controllers.removeListener('left-trigger');
 ```
 
-Remove Joystick `move` events with `left-joystick-move`.  
-Remove controller `connect` events with `controller-connect`.
+Remove Joystick `move` listeners with `left-joystick-move`.  
+Remove controller `connect` listeners with `controller-connect`.
 
 # Button list
 
