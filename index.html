@@ -79,7 +79,7 @@ controllers.on.move('left-joystick', (value) =&gt; {
 </code></pre>
 <p>Also <code class="language-plaintext highlighter-rouge">right-joystick</code>.</p>
 
-<h2 id="controller-connected">Controller connected</h2>
+<h2 id="controller-connected">Controller connect</h2>
 
 <pre><code class="language-JS">const controllers = Joycon.controllers;
 
@@ -110,15 +110,15 @@ controllers.vibrate({
 }, 250);
 </code></pre>
 
-<h2 id="remove-a-listener">Remove a listener</h2>
+<h2 id="remove-a-listener">Remove listener</h2>
 
 <pre><code class="language-JS">const controllers = Joycon.controllers;
 
 controllers.removeListener('left-trigger');
 </code></pre>
 
-<p>Remove Joystick <code class="language-plaintext highlighter-rouge">move</code> events with <code class="language-plaintext highlighter-rouge">left-joystick-move</code>.<br>
-Remove controller <code class="language-plaintext highlighter-rouge">connect</code> events with <code class="language-plaintext highlighter-rouge">controller-connect</code>.</p>
+<p>Remove Joystick <code class="language-plaintext highlighter-rouge">move</code> listeners with <code class="language-plaintext highlighter-rouge">left-joystick-move</code>.<br>
+Remove controller <code class="language-plaintext highlighter-rouge">connect</code> listeners with <code class="language-plaintext highlighter-rouge">controller-connect</code>.</p>
 
 <h1 id="button-list">Button list</h1>
 
