@@ -47,7 +47,7 @@ controllers.on.move('left-joystick', (value) => {
 ```
 Also `right-joystick`.
 
-## Controller connected
+## Controller connect
 
 ```JS
 const controllers = Joycon.controllers;
@@ -80,7 +80,7 @@ controllers.vibrate({
 }, 250);
 ```
 
-## Remove a listener
+## Remove listener
 
 ```JS
 const controllers = Joycon.controllers;
