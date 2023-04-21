@@ -108,4 +108,4 @@ Remove controller `connect` listeners with `controller-connect`.
 
 ---
 
-Thanks for coming by! <3
+Thanks for coming by!
