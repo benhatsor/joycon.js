@@ -2,7 +2,7 @@
 
 Add controller functionality to your JavaScript game.
 
-[![License](https://img.shields.io/github/license/barhatsor/joycon.js)](/LICENSE) [![Minified size](https://img.shields.io/github/size/barhatsor/joycon.js/Joycon.min.js)](/Joycon.min.js)
+[![License](https://img.shields.io/github/license/benhatsor/joycon.js)](/LICENSE) [![Minified size](https://img.shields.io/github/size/benhatsor/joycon.js/Joycon.min.js)](/Joycon.min.js)
 
 - Supports PlayStation & Xbox
 - [Really simple API.](#api)
@@ -13,10 +13,10 @@ Add controller functionality to your JavaScript game.
 
 Add this line to the `<body>`:
 ```HTML
-<script src="https://cdn.cde.run/Joycon.min.js"></script>
+<script src="https://joycon.js.org/Joycon.min.js"></script>
 ```
 
-Here's a [demo.](https://cde.run/barhatsor/joycon.js/demo.html)
+Here's a [demo.](https://cde.run/benhatsor/joycon.js/demo.html)
 
 # API
 
