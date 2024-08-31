@@ -73,7 +73,7 @@ const controllers = Joycon.controllers;
 // preset can be mild, medium or strong
 controllers.vibrate({ preset: 'medium' }, 250); // -> time in ms
 
-// or you can choose your own values
+// or choose your own values
 controllers.vibrate({
   mildMotorIntensity: 0.5,
   strongMotorIntensity: 0.5
