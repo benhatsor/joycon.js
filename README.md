@@ -20,11 +20,13 @@ Add this line to the `<body>`:
 
 # API
 
+```JS
+const controllers = Joycon.controllers;
+```
+
 ## Buttons
 
 ```JS
-const controllers = Joycon.controllers;
-
 controllers.on.press('start', (value) => {
 
   console.log('pressed start!', value); // value is 0 to 1
@@ -37,8 +39,6 @@ Button can be `a`, `b`, `x`, `y`, `start`, `left-trigger`, etc. ([full list belo
 ## Joystick
 
 ```JS
-const controllers = Joycon.controllers;
-
 controllers.on.move('left-joystick', (value) => {
 
   console.log('moved left joystick!', value.x, value.y); // value is -1 to 1 down/right
@@ -50,8 +50,6 @@ Also `right-joystick`.
 ## Controller connect
 
 ```JS
-const controllers = Joycon.controllers;
-
 controllers.on.connect((controller) => {
 
   console.log('controller connected!', controller);
@@ -68,8 +66,6 @@ controllers.on.disconnect((controller) => {
 ## Vibrate
 
 ```JS
-const controllers = Joycon.controllers;
-
 // preset can be mild, medium or strong
 controllers.vibrate({ preset: 'medium' }, 250); // -> time in ms
 
@@ -83,8 +79,6 @@ controllers.vibrate({
 ## Remove listener
 
 ```JS
-const controllers = Joycon.controllers;
-
 controllers.removeListener('left-trigger');
 ```
 
